@@ -23,7 +23,6 @@
   const gameScreen = document.getElementById('game-screen');
   const bigBoardEl = document.getElementById('big-board');
   const startBtn = document.getElementById('start-btn');
-  const backBtn = document.getElementById('back-btn');
   const gameMessage = document.getElementById('game-message');
 
   function getTimerMinutes() {
@@ -248,14 +247,7 @@
     gameScreen.classList.add('active');
   }
 
-  function goHome() {
-    stopAllTimers();
-    homeScreen.classList.add('active');
-    gameScreen.classList.remove('active');
-  }
-
   startBtn.addEventListener('click', initGame);
-  backBtn.addEventListener('click', goHome);
 
   document.querySelectorAll('input[name="timer"]').forEach(radio => {
     radio.addEventListener('change', () => {
