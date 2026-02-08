@@ -3,78 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nested Tic Tac Toe</title>
+  <title>Games</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
-  <div id="app">
-    <!-- Home Screen -->
-    <section id="home-screen" class="screen active">
-      <div class="home-card">
-        <h1>Nested Tic Tac Toe</h1>
-        <p class="subtitle">3×3 boards inside a 3×3 board</p>
-
-        <div class="form-group">
-          <label for="player1-name">Player 1 (X)</label>
-          <input type="text" id="player1-name" placeholder="Enter name" maxlength="20" autocomplete="off">
-        </div>
-        <div class="form-group">
-          <label for="player2-name">Player 2 (O)</label>
-          <input type="text" id="player2-name" placeholder="Enter name" maxlength="20" autocomplete="off">
-        </div>
-
-        <div class="form-group">
-          <label>Timer (per player)</label>
-          <div class="timer-options">
-            <label class="timer-option">
-              <input type="radio" name="timer" value="5" checked>
-              <span>5 minutes</span>
-            </label>
-            <label class="timer-option">
-              <input type="radio" name="timer" value="10">
-              <span>10 minutes</span>
-            </label>
-            <label class="timer-option timer-custom">
-              <input type="radio" name="timer" value="custom">
-              <span>Custom</span>
-              <input type="number" id="custom-minutes" min="1" max="60" value="5" placeholder="min">
-            </label>
-          </div>
-        </div>
-
-        <button type="button" id="start-btn" class="btn-primary">Start Game</button>
+  <div class="home">
+    <header class="home-header">
+      <h1>Games</h1>
+      <p class="home-tagline">Pick a game and play</p>
+      <div class="search-wrap">
+        <input type="search" id="search" class="search-input" placeholder="Search games…" aria-label="Search games" autocomplete="off">
       </div>
-    </section>
+    </header>
 
-    <!-- Game Screen -->
-    <section id="game-screen" class="screen">
-      <header class="game-header">
-        <button type="button" id="back-btn" class="btn-ghost" title="Back to menu">← Menu</button>
-        <div class="players-row">
-          <div class="player-info" data-player="1">
-            <span class="player-name"></span>
-            <span class="timer-display"></span>
-          </div>
-          <span class="vs">vs</span>
-          <div class="player-info" data-player="2">
-            <span class="player-name"></span>
-            <span class="timer-display"></span>
-          </div>
-        </div>
-        <div class="turn-indicator"></div>
-      </header>
+    <main class="game-list" id="game-list">
+      <!-- Populated by JS from games data -->
+    </main>
 
-      <div class="big-board" id="big-board" aria-label="Nested tic tac toe board">
-        <!-- 9 small boards rendered by JS -->
-      </div>
-
-      <div id="game-message" class="game-message" hidden></div>
-    </section>
+    <p class="no-results" id="no-results" hidden>No games match your search.</p>
   </div>
 
-  <script src="app.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>
