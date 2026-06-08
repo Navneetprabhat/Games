@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5×5 Tic Tac Toe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <section id="home-screen" class="screen active">
+      <div class="home-card">
+        <h1>5×5 Tic Tac Toe</h1>
+        <p class="subtitle">Place 4 in a row to win the game.</p>
+
+        <div class="form-group">
+          <label for="player1-name">Player 1 (X)</label>
+          <input type="text" id="player1-name" placeholder="Enter name" maxlength="20" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="player2-name">Player 2 (O)</label>
+          <input type="text" id="player2-name" placeholder="Enter name" maxlength="20" autocomplete="off">
+        </div>
+
+        <button type="button" id="start-btn" class="btn-primary">Start Game</button>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen">
+      <header class="game-header">
+        <a href="../" class="btn-ghost" title="Back to games">← Games</a>
+        <div class="game-controls">
+          <span class="turn-indicator"></span>
+          <button type="button" id="restart-btn" class="btn-secondary">Restart</button>
+        </div>
+      </header>
+
+      <div id="board" class="board" aria-label="5x5 tic tac toe board"></div>
+      <div id="game-message" class="game-message" hidden></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
