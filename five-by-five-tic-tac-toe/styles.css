@@ -97,6 +97,29 @@ body {
   border-color: var(--accent);
 }
 
+.rules-card,
+.rules-panel {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+}
+
+.rules-card h2,
+.rules-panel h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.rules-card p,
+.rules-panel p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
 .btn-primary,
 .btn-secondary,
 .btn-ghost {
