@@ -7,6 +7,12 @@
       title: 'Nested Tic Tac Toe',
       description: '3×3 boards inside a 3×3 board. Win the small boards to claim the big one. Two players, optional timer.',
       tags: 'tic tac toe strategy board nested'
+    },
+    {
+      id: 'five-by-five-tic-tac-toe',
+      title: '5×5 Tic Tac Toe',
+      description: 'Classic 5×5 board play. Win by connecting 4 in a row horizontally, vertically, or diagonally.',
+      tags: 'tic tac toe 5x5 connect4 board'
     }
   ];
 
