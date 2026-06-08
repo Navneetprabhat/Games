@@ -61,7 +61,7 @@
         stopAllTimers();
         state.gameOver = true;
         state.winner = playerIndex === 1 ? 2 : 1;
-        showMessage(`${state.playerNames[state.winner - 1]} wins by time!`);
+        showMessage(`${state.playerNames[state.winner - 1]} wins by time`);
       }
     }, 1000);
   }
